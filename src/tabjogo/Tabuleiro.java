@@ -29,6 +29,12 @@ public class Tabuleiro {
 		this.qtdeColunas = qtdeColunas;
 	}
 	
-	
+	public Peca peca(int lin, int col) {
+		return pecas[lin][col];
+	}
 
+	public Peca peca(Posicao posic) {
+		return pecas[posic.getLinha()][posic.getColuna()];
+	}
+	
 }

@@ -1,5 +1,6 @@
 package application;
 
+import chadrez.PartidaChadrez;
 import tabjogo.Posicao;
 import tabjogo.Tabuleiro;
 
@@ -7,7 +8,8 @@ public class Programa {
 
 	public static void main(String[] args) {
 
-		Tabuleiro tab = new Tabuleiro(8, 8);
+		PartidaChadrez partChadrez = new PartidaChadrez();
+		UI.imprimeTabuleiro(partChadrez.getPecas());
 	}
 
 }
