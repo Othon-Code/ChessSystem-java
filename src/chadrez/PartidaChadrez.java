@@ -2,7 +2,6 @@ package chadrez;
 
 import chadrez.pecas.Rei;
 import chadrez.pecas.Torre;
-import tabjogo.Posicao;
 import tabjogo.Tabuleiro;
 
 public class PartidaChadrez {
@@ -25,9 +24,13 @@ public class PartidaChadrez {
 
 	}
 
+	private void novoLugarPeca(char colun, int lin, PecaChadrez peca) {
+		tabuleiro.lugarPeca(peca, new PosicChadrez(colun, lin).toposicao());
+	}
+
 	private void iniciarSetUp() {
-		tabuleiro.lugarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2, 1));
-		tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0, 4));
-		tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7, 4));
+		novoLugarPeca('b', 6, new Torre(tabuleiro, Cor.BRANCO));
+		novoLugarPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
+		novoLugarPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
 	}
 }
